@@ -10,3 +10,8 @@
 ## 技術
 - Arduino IDE
 - Wifi Webserver 
+
+## 函式庫
+- DHT Sensor Library
+- Adafruit_GFX
+- Adafruit_SSD1306
