@@ -13,5 +13,5 @@
 
 ## 函式庫
 - DHT Sensor Library
-- Adafruit_GFX
-- Adafruit_SSD1306
+- 
+- 
