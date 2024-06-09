@@ -8,5 +8,5 @@
 1. 電扇
 
 ## 技術
-Arduino IDE
-Wifi Webserver 
+- Arduino IDE
+- Wifi Webserver 
