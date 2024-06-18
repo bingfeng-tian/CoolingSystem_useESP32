@@ -13,5 +13,5 @@
 
 ## 函式庫
 - DHT Sensor Library
-- 
+- LiquidCrystal_I2C
 - 
