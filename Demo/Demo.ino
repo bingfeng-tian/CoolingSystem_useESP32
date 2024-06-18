@@ -5,7 +5,7 @@
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
-#define CRITICAL_TEMP 30
+#define CRITICAL_TEMP 45
 #define FAN_PIN 13
 
 float humi;
@@ -21,7 +21,7 @@ void setup()
   lcd.init();       // 初始化lcd物件
   lcd.backlight();  // 開啟背光
 
-  Serial.println("DHTxx test!");
+  Serial.println("Ready!");
   dht.begin();      //初始化DHT
   
   pinMode(FAN_PIN, OUTPUT);
@@ -48,14 +48,25 @@ void loop()
 void readTemp() {
   humi = dht.readHumidity();   //取得濕度
   temp = dht.readTemperature();  //取得溫度C
+  showData(humi,temp);
+
+  delay(1000);
+}
+
+void showData(float h, float t){
+  // LCD
   lcd.setCursor(0,0);
-  lcd.print("humi:");
-  lcd.print(humi);
+  lcd.print("Humi:");
+  lcd.print(h);
   lcd.setCursor(0,1);
-  lcd.print("temp:");
-  lcd.print(temp);
+  lcd.print("Temp:");
+  lcd.print(t);
   lcd.print(char(223));
   lcd.print("C");
 
-  delay(1000);
+  //Serial
+  Serial.print("Humi: ");
+  Serial.print(h);
+  Serial.print("\tTemp: ");
+  Serial.println(t);
 }
