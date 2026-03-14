@@ -2,7 +2,7 @@
 
 這是一個基於 ESP32 開發的自動化散熱解決方案，整合了物聯網（IoT）技術，支援實時溫濕度監測、自動化硬體回饋以及遠端網頁控制。
 
-github link: https://github.com/bingfeng-tian/CoolingSystem_useESP32/edit/main/README.md
+github link: https://github.com/bingfeng-tian/CoolingSystem_useESP32
 
 ## 🛠️ 硬體材料
 
