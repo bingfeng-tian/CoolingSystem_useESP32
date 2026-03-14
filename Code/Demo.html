@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 散熱系統監控</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 { color: #2c3e50; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .data-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .label { color: #64748b; font-size: 0.9rem; margin-bottom: 0.2rem; }
+        .value { font-size: 1.8rem; font-weight: bold; color: #1e293b; }
+        .unit { font-size: 1rem; color: #64748b; margin-left: 4px; }
+        
+        .status-box {
+            margin: 1.5rem 0;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: bold;
+            background: #dcfce7;
+            color: #166534; /* 預設正常狀態顏色 */
+        }
+        /* 當風扇開啟時的模擬樣式 */
+        .status-on { background: #fee2e2; color: #991b1b; }
+
+        .btn-group { display: flex; flex-direction: column; gap: 10px; }
+        .btn {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn-red { background-color: #ef4444; }
+        .btn-gray { background-color: #64748b; }
+        .btn-blue { background-color: #3b82f6; }
+        
+        .footer { margin-top: 1.5rem; font-size: 0.8rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌀 散熱系統監控面板</h1>
+
+    <div class="data-card">
+        <div class="label">當前溫度</div>
+        <div class="value">16.10<span class="unit">°C</span></div>
+    </div>
+
+    <div class="data-card">
+        <div class="label">環境濕度</div>
+        <div class="value">38.50<span class="unit">%</span></div>
+    </div>
+
+    <div class="status-box">
+        風扇狀態：關閉 (自動待機)
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
+
+    <div class="btn-group">
+        <a href="#" class="btn btn-red">手動開啟風扇</a>
+        <a href="#" class="btn btn-gray">手動關閉風扇</a>
+        <a href="#" class="btn btn-blue">切換回自動模式</a>
+    </div>
+
+    <div class="footer">
+        最後更新：2026/03/14 15:22:10
+    </div>
+</div>
+
+</body>
+</html>
