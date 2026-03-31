@@ -72,7 +72,7 @@
 
 ### 網頁監控介面
 
-<img src="./image/螢幕擷取畫面 2026-03-14 152631.png" width="300">
+<img src="./image/WebDemo.jpg.png" width="300">
 
 ---
 
