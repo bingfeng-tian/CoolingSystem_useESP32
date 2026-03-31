@@ -68,11 +68,11 @@
 
 ### Wokwi 模擬畫面
 
-<img src="./image/螢幕擷取畫面 2026-03-14 152306.png" width="500">
+<img src="./image/WokiView.png" width="500">
 
 ### 網頁監控介面
 
-<img src="./image/WebDemo.jpg.png" width="300">
+<img src="./image/WebDemo.png" width="300">
 
 ---
 
